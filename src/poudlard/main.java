@@ -21,7 +21,7 @@ public class main {
 
 	        while (!action.equals("QUIT")) {
 
-	            System.out.println("\nBienvenue � Poudlard ! \n - Tapez '+' pour ajouter un �l�ment au tableau. \n - Tapez '-' pour en retirer. \n - Tapez 'GET' pour afficher le tableau. \n - Tapez 'SIZE' pour conna�tre la taille du tableau. \n - Tapez 'QUIT' pour quitter le programme.");
+	            System.out.println("\nBienvenue � Poudlard ! \n - Tapez '+' pour ajouter un �l�ment au tableau. \n - Tapez '-' pour en retirer. \n - Tapez 'GET' pour afficher le tableau. \\n - Tapez 'DEL' pour Supprimer un elem du tableau. \n - Tapez 'SIZE' pour conna�tre la taille du tableau. \n - Tapez 'QUIT' pour quitter le programme.");
 	            action = sc.next();
 
 	            if (action.equals("+") || action.equals("-")) {
@@ -31,18 +31,36 @@ public class main {
 
 	                if (action.equals("+")) {
 	                    System.out.println("Saisir le texte :");
+	                    Integer points = hellos.get(id);
+	                    
 	                    text = sc.nextInt();
-	                    hellos.put(id, text);
+	                    
+	                    points = points + text;
+	                    hellos.put(id, points);
 
 	                } else if (action.equals("-")) {
-	                    if (hellos.get(id) != null) {
-	                        hellos.remove(id);
-	                    } else {
-	                        System.out.println("La cl� " + id + " n'existe pas.");
-	                    }
+	                    System.out.println("Saisir le texte :");
+	                    Integer points = hellos.get(id);
+	                    
+	                    text = sc.nextInt();
+	                    
+	                    points = points - text;
+	                    hellos.put(id, points);
+	                	
+	                }
+	                	
+	            } else if (action.equals("DEL")) {
+	            	id = sc.next();
+                    if (hellos.get(id) != null) {
+                        hellos.remove(id);
+                    } else {
+                        System.out.println("La cl� " + id + " n'existe pas.");
+                    }
 
-	                } 
-	            } else if (action.equals("GET")) {
+                } 
+	            
+	            
+	            else if (action.equals("GET")) {
 	                iterator = hellos.keySet().iterator();
 	                while (iterator.hasNext()) {
 	                    key = iterator.next();
