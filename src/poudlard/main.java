@@ -9,7 +9,8 @@ public class main {
 	        Scanner sc = new Scanner(System.in);
 	        HashMap <String, Integer> hellos = new HashMap<String, Integer>();
 
-	        String action, id, text, key;
+	        String action, id, key;
+	        Integer text;
 	        action = "";
 
 	        hellos.put("Gryffindor", 10000);
@@ -31,7 +32,7 @@ public class main {
 
 	                if (action.equals("+")) {
 	                    System.out.println("Saisir le texte :");
-	                    text = sc.next();
+	                    text = sc.nextInt();
 	                    hellos.put(id, text);
 
 	                } else if (action.equals("-")) {
