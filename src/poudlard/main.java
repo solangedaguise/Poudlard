@@ -21,18 +21,19 @@ public class main {
 
 	        while (!action.equals("QUIT")) {
 
-	            System.out.println("\nBienvenue � Poudlard ! \n - Tapez '+' pour ajouter un �l�ment au tableau. \n - Tapez '-' pour en retirer. \n - Tapez 'GET' pour afficher le tableau. \\n - Tapez 'DEL' pour Supprimer un elem du tableau. \n - Tapez 'SIZE' pour conna�tre la taille du tableau. \n - Tapez 'QUIT' pour quitter le programme.");
+	            System.out.println("\nBienvenue � Poudlard ! \n - Tapez '+' pour ajouter un �l�ment au tableau. \n - Tapez '-' pour en retirer. \n - Tapez 'GET' pour afficher le tableau. \n - Tapez 'DEL' pour Supprimer un elem du tableau. \n - Tapez 'SIZE' pour conna�tre la taille du tableau. \n - Tapez 'QUIT' pour quitter le programme.");
 	            action = sc.next();
 
 	            if (action.equals("+") || action.equals("-")) {
-	                System.out.println("Saisir l'identifiant :");
+	                System.out.println("Saisir la maison :");
 
 	                id = sc.next();
 
 	                if (action.equals("+")) {
-	                    System.out.println("Saisir le texte :");
+
+						System.out.println("Saisir les points :");
 	                    Integer points = hellos.get(id);
-	                    
+	   
 	                    text = sc.nextInt();
 	                    
 	                    points = points + text;
@@ -61,6 +62,7 @@ public class main {
 	            
 	            
 	            else if (action.equals("GET")) {
+
 	                iterator = hellos.keySet().iterator();
 	                while (iterator.hasNext()) {
 	                    key = iterator.next();
