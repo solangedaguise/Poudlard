@@ -7,15 +7,15 @@ import java.util.Scanner;
 public class main {
 	    public static void main(String[] args) {
 	        Scanner sc = new Scanner(System.in);
-	        HashMap <String, String> hellos = new HashMap<String, String>();
+	        HashMap <String, Integer> hellos = new HashMap<String, Integer>();
 
-	        String action, id, text, key;
+	        String action, id, key;
+	        Integer text;
 	        action = "";
-
-	        hellos.put("Gryffindor", "-50");
-	        hellos.put("Hufflepuff", "15");
-	        hellos.put("Ravenclaw", "60");
-	        hellos.put("Slytherin", "10");
+	        hellos.put("Gryffindor", 10000);
+	        hellos.put("Hufflepuff", 999999);
+	        hellos.put("Ravenclaw", 5000);
+	        hellos.put("Slytherin", 10);
 
 	        Iterator<String> iterator;
 
@@ -31,7 +31,7 @@ public class main {
 
 	                if (action.equals("+")) {
 	                    System.out.println("Saisir le texte :");
-	                    text = sc.next();
+	                    text = sc.nextInt();
 	                    hellos.put(id, text);
 
 	                } else if (action.equals("-")) {
