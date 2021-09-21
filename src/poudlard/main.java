@@ -12,10 +12,10 @@ public class main {
 	        String action, id, text, key;
 	        action = "";
 
-	        hellos.put("Gryffondor", "0");
-	        hellos.put("Poufsouffle", "0");
-	        hellos.put("Serdaigle", "0");
-	        hellos.put("Serpentard", "0");
+	        hellos.put("Gryffindor", "0");
+	        hellos.put("Hufflepuff", "0");
+	        hellos.put("Ravenclaw", "0");
+	        hellos.put("Slytherin", "0");
 
 	        Iterator<String> iterator;
 
