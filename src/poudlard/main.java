@@ -25,17 +25,18 @@ public class main {
 	            action = sc.next();
 
 	            if (action.equals("+") || action.equals("-")) {
-	                System.out.println("Saisir l'identifiant :");
+	                System.out.println("Saisir la maison :");
 
 	                id = sc.next();
 
 	                if (action.equals("+")) {
-	                    System.out.println("Saisir le texte :");
+	                    System.out.println("Saisir les points :");
 	                    text = sc.nextInt();
 	                    hellos.put(id, text);
 
 	                } else if (action.equals("-")) {
 	                    if (hellos.get(id) != null) {
+	                    	System.out.println("Supprimer la maison " + id);
 	                        hellos.remove(id);
 	                    } else {
 	                        System.out.println("La cl� " + id + " n'existe pas.");
